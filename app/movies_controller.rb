@@ -29,7 +29,7 @@ def can_be_created_in_a_block(args = { title: "Home Alone"})
   # release_date == 1990
   
   Movie.find_or_create_by(args) do |m|
-    m.title = "Home Alone"
+    m.title = args[0]
     m.release_date = 1990
   end
 end
